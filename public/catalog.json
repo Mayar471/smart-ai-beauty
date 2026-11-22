@@ -1,0 +1,310 @@
+[
+  {
+    "id": "fp-9813-18",
+    "name": "فستان خوخي دانتيل",
+    "detail": "فستان من عينة Fashionpedia",
+    "image": "/assets/fashionpedia/fp-9813-18.png",
+    "tryOnImage": "/assets/fashionpedia/fp-9813-18-tryon.png",
+    "category": "dress",
+    "colorName": "خوخي",
+    "occasions": [
+      "سهرة",
+      "زواج"
+    ],
+    "sourceImageId": 9813,
+    "annotationId": 18,
+    "sourceUrl": "https://github.com/KMnP/fashionpedia-api/blob/master/images/000000009813.jpg",
+    "attributeNames": [
+      "knee (length)",
+      "wrist-length",
+      "symmetrical",
+      "fit and flare",
+      "circle",
+      "gauze",
+      "empire waistline"
+    ],
+    "cropBox": [
+      50,
+      186,
+      411,
+      699
+    ],
+    "maskType": "polygon",
+    "displayMetadata": "Curated names/colors/occasions for these three demo samples, not predicted labels"
+  },
+  {
+    "id": "fp-10223-34",
+    "name": "بنطال أسود - عينة جزئية",
+    "detail": "تظهر القطعة جزئياً في صورة المصدر",
+    "image": "/assets/fashionpedia/fp-10223-34.png",
+    "tryOnImage": "/assets/fashionpedia/fp-10223-34-tryon.png",
+    "category": "pants",
+    "colorName": "أسود",
+    "occasions": [
+      "يوم عمل",
+      "خروج يومي"
+    ],
+    "sourceImageId": 10223,
+    "annotationId": 34,
+    "sourceUrl": "https://github.com/KMnP/fashionpedia-api/blob/master/images/000000010223.jpg",
+    "attributeNames": [
+      "fly (opening)",
+      "symmetrical",
+      "plain (pattern)",
+      "normal waist"
+    ],
+    "cropBox": [
+      315,
+      970,
+      813,
+      1478
+    ],
+    "maskType": "polygon",
+    "displayMetadata": "Curated names/colors/occasions for these three demo samples, not predicted labels"
+  },
+  {
+    "id": "fp-10223-37",
+    "name": "قميص أبيض",
+    "detail": "قميص من عينة Fashionpedia",
+    "image": "/assets/fashionpedia/fp-10223-37.png",
+    "tryOnImage": "/assets/fashionpedia/fp-10223-37-tryon.png",
+    "category": "shirt, blouse",
+    "colorName": "أبيض",
+    "occasions": [
+      "يوم عمل",
+      "خروج يومي"
+    ],
+    "sourceImageId": 10223,
+    "annotationId": 37,
+    "sourceUrl": "https://github.com/KMnP/fashionpedia-api/blob/master/images/000000010223.jpg",
+    "attributeNames": [],
+    "cropBox": [
+      123,
+      381,
+      760,
+      1155
+    ],
+    "maskType": "polygon",
+    "displayMetadata": "Curated names/colors/occasions for these three demo samples, not predicted labels"
+  },
+  {
+    "id": "modest-abaya",
+    "name": "عباءة واسعة مع حجاب",
+    "detail": "صورة مولدة بالذكاء الاصطناعي للتجربة، وليست منتجاً معروضاً للبيع",
+    "image": "/assets/modest/abaya.jpg",
+    "category": "dress",
+    "colorName": "أسود",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي"
+    ],
+    "modest": true,
+    "includesHijab": true,
+    "source": "generated-sample",
+    "attributeNames": [
+      "long sleeves",
+      "ankle length",
+      "loose fit",
+      "opaque",
+      "hijab"
+    ],
+    "sourceUrl": "generated-with-cloudflare-flux-2-klein-4b"
+  },
+  {
+    "id": "modest-office",
+    "name": "طقم محتشم للعمل مع حجاب",
+    "detail": "صورة مولدة بالذكاء الاصطناعي للتجربة، وليست منتجاً معروضاً للبيع",
+    "image": "/assets/modest/office.jpg",
+    "category": "dress",
+    "colorName": "كحلي",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي"
+    ],
+    "modest": true,
+    "includesHijab": true,
+    "source": "generated-sample",
+    "attributeNames": [
+      "long sleeves",
+      "ankle length",
+      "loose fit",
+      "opaque",
+      "hijab"
+    ],
+    "sourceUrl": "generated-with-cloudflare-flux-2-klein-4b"
+  },
+  {
+    "id": "modest-occasion",
+    "name": "فستان طويل بأكمام مع حجاب",
+    "detail": "صورة مولدة بالذكاء الاصطناعي للتجربة، وليست منتجاً معروضاً للبيع",
+    "image": "/assets/modest/occasion.jpg",
+    "category": "dress",
+    "colorName": "زيتي",
+    "occasions": [
+      "سهرة",
+      "تخرج",
+      "زواج"
+    ],
+    "modest": true,
+    "includesHijab": true,
+    "source": "generated-sample",
+    "attributeNames": [
+      "long sleeves",
+      "ankle length",
+      "loose fit",
+      "opaque",
+      "hijab"
+    ],
+    "sourceUrl": "generated-with-cloudflare-flux-2-klein-4b"
+  },
+  {
+    "id": "modest-tunic",
+    "name": "تونيك طويل بأكمام",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/tunic.svg",
+    "category": "shirt, blouse",
+    "colorName": "بيج",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "long sleeves",
+      "thigh length",
+      "loose fit",
+      "opaque"
+    ]
+  },
+  {
+    "id": "modest-wide-pants",
+    "name": "بنطال واسع بخصر مرتفع",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/wide-pants.svg",
+    "category": "pants",
+    "colorName": "كحلي",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "wide leg",
+      "high waist",
+      "ankle length",
+      "opaque"
+    ]
+  },
+  {
+    "id": "modest-maxi-skirt",
+    "name": "تنورة ماكسي واسعة",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/maxi-skirt.svg",
+    "category": "skirt",
+    "colorName": "زيتي",
+    "occasions": [
+      "خروج يومي",
+      "يوم عمل",
+      "تخرج"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "maxi length",
+      "a-line",
+      "loose fit",
+      "opaque"
+    ]
+  },
+  {
+    "id": "modest-trench",
+    "name": "معطف ترنش طويل",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/trench.svg",
+    "category": "outerwear",
+    "colorName": "جملي",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي",
+      "سهرة"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "long sleeves",
+      "knee length",
+      "belted",
+      "layering piece"
+    ]
+  },
+  {
+    "id": "modest-maxi-dress",
+    "name": "فستان ماكسي بأكمام طويلة",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/maxi-dress.svg",
+    "category": "dress",
+    "colorName": "وردي غامق",
+    "occasions": [
+      "خطوبة",
+      "زواج",
+      "تخرج",
+      "سهرة"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "long sleeves",
+      "maxi length",
+      "fit and flare",
+      "opaque"
+    ]
+  },
+  {
+    "id": "modest-flats",
+    "name": "حذاء مسطح أنيق",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/flats.svg",
+    "category": "shoes",
+    "colorName": "عاجي",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خروج يومي",
+      "تخرج"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "flat",
+      "closed toe"
+    ]
+  },
+  {
+    "id": "modest-handbag",
+    "name": "حقيبة يد كلاسيكية",
+    "detail": "رسم توضيحي لقطعة محتشمة، وليس منتجاً معروضاً للبيع",
+    "image": "/assets/modest/handbag.svg",
+    "category": "bag",
+    "colorName": "عنابي",
+    "occasions": [
+      "يوم عمل",
+      "مقابلة عمل",
+      "خطوبة",
+      "زواج",
+      "سهرة"
+    ],
+    "modest": true,
+    "source": "illustration",
+    "attributeNames": [
+      "top handle",
+      "structured"
+    ]
+  }
+]

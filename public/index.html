@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Smart AI Beauty: مساعدة عربية لتنسيق إطلالة المناسبة حسب الطقس والخزانة، مع دعم كامل لإطلالات الحجاب."
+    />
+    <meta name="theme-color" content="#7b2d4e" />
+    <title>Smart AI Beauty | إطلالتك، بطريقتك</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/dashboard.css" />
+    <link rel="stylesheet" href="/social.css" />
+    <link rel="stylesheet" href="/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Smart AI Beauty الرئيسية">
+        <span class="spark">✦</span><strong>Smart AI Beauty</strong><small>مساحتك لإطلالة تشبهك</small>
+      </a>
+      <div class="profile">
+        <span class="avatar">♡</span>
+        <div><span id="profile-name">أهلاً بكِ</span><small>لحظة صغيرة لنفسك</small></div>
+      </div>
+      <button id="account-button" class="account-button">إنشاء حساب / دخول</button>
+      <nav aria-label="التنقل الرئيسي">
+        <button id="home" class="nav active">⌂ <span>الرئيسية</span></button>
+        <button id="consult" class="nav">✧ <span>مستشارة الجمال</span></button>
+        <button id="new-look" class="nav">＋ <span>مناسبة جديدة</span></button>
+        <button id="wardrobe-nav" class="nav">▧ <span>خزانتي</span></button>
+        <button id="photos-nav" class="nav">♡ <span>ملفي وصوري</span></button>
+      </nav>
+      <div class="side-bottom">
+        <span class="tiny-star">✦</span>
+        <p>جمالك في اختياراتك.<br />ونحن هنا لنرتّب الإلهام.</p>
+        <small>نسخة محلية · 1.0.0</small>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header>
+        <div class="breadcrumb">لوحة التحكم</div>
+        <span class="local-badge"><i></i> على جهازك</span>
+      </header>
+      <section class="intro" hidden></section>
+      <ol id="steps" class="steps" aria-label="خطوات الإطلالة" hidden></ol>
+      <div class="workspace" hidden>
+        <section class="panel">
+          <div class="section-top"><span id="step-count"></span><span>✦ مساحة للإلهام</span></div>
+          <div id="content"></div>
+          <div class="actions">
+            <button id="back" class="secondary">العودة</button>
+            <button id="next" class="primary">متابعة ←</button>
+          </div>
+        </section>
+        <aside class="summary">
+          <div class="summary-head"><span>لوحة إطلالتك</span><span>♡</span></div>
+          <div id="portrait-preview" class="portrait-preview"></div>
+          <div id="summary-items"></div>
+          <p class="privacy">
+            يمكن حفظ الصور في حسابك على هذا الجهاز. لا تُرسل الصور مع طلبات الاقتراحات أو المحادثة.
+          </p>
+        </aside>
+      </div>
+      <footer>Smart AI Beauty <span>صُممت لتمنح اختياراتك مساحة.</span></footer>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite" popover="manual"></div>
+
+    <dialog id="consult-dialog" class="chat-dialog" aria-labelledby="chat-title">
+      <div class="chat-header">
+        <span class="chat-avatar">✦</span>
+        <div>
+          <h2 id="chat-title">مستشارة الجمال</h2>
+          <small><i></i> أزياء · شعر وحجاب · مكياج</small>
+        </div>
+        <button id="chat-clear" class="chat-clear" type="button" hidden>مسح المحادثة</button>
+        <button class="close" aria-label="إغلاق المحادثة">×</button>
+      </div>
+      <p id="chat-context" class="chat-context" hidden></p>
+      <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-label="المحادثة"></div>
+      <div id="chat-suggestions" class="chat-suggestions"></div>
+      <p id="chat-error" role="alert"></p>
+      <form id="chat-form" class="chat-composer">
+        <label class="sr-only" for="chat-input">رسالتك لمستشارة الجمال</label>
+        <textarea
+          id="chat-input"
+          maxlength="2000"
+          rows="1"
+          placeholder="احكيلي عن الإطلالة اللي ببالك…"
+        ></textarea>
+        <button id="chat-send" type="submit" aria-label="إرسال الرسالة">↑</button>
+      </form>
+      <div class="chat-note">محادثة نصية مع Gemini · محفوظة لحسابك · لا تُرسل صورك</div>
+    </dialog>
+
+    <script type="module" src="/app.js"></script>
+    <script type="module" src="/account.js"></script>
+    <script type="module" src="/dashboard.js"></script>
+    <script type="module" src="/chat.js"></script>
+  </body>
+</html>

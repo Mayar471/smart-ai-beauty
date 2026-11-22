@@ -1,0 +1,487 @@
+/* Components added in 1.0: hijab choice, feature chips, filters, save indicator, toast layer, a11y helpers. */
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 12px;
+  top: -60px;
+  z-index: 20;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 12px;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Toast: a manual popover so it also shows above open dialogs. */
+#toast {
+  display: none;
+  inset: auto;
+  inset-inline-start: 25px;
+  bottom: 25px;
+  margin: 0;
+  border: 0;
+  max-width: min(400px, calc(100vw - 50px));
+  line-height: 1.8;
+  box-shadow: 0 10px 30px #2420273d;
+}
+#toast.visible,
+#toast:popover-open {
+  display: block;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: 50%;
+  vertical-align: -2px;
+  animation: sab-spin 0.8s linear infinite;
+}
+@keyframes sab-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2.4s;
+  }
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.icon-button {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.icon-button.danger:hover {
+  border-color: #e3a9b4;
+  background: #fdf1f3;
+}
+
+/* Hijab / no-hijab choice at the top of the profile step. */
+.hijab-choice {
+  margin: 4px 0 24px;
+  padding: 20px;
+  border: 1px solid #ead2e5;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fcf6fb, #fff8f3);
+}
+.hijab-choice > strong {
+  display: block;
+  color: var(--ink);
+  font-size: 15px;
+}
+.hijab-choice > p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+.hijab-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.hijab-option {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 14px 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.hijab-option:hover {
+  border-color: #dcb4d2;
+}
+.hijab-option.selected {
+  border-color: #c64a9f;
+  box-shadow: 0 0 0 2px #eccce5;
+}
+.hijab-option-art svg {
+  width: 84px;
+  height: 94px;
+}
+.hijab-option b {
+  font-size: 14px;
+  font-weight: 600;
+}
+.hijab-option small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.hijab-option.selected b::before {
+  content: '✓ ';
+  color: var(--accent);
+}
+
+/* Appearance analysis. */
+.feature-status-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.feature-status-head .secondary {
+  padding: 7px 14px;
+  font-size: 11px;
+}
+.feature-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+.feature-chip {
+  display: grid;
+  gap: 3px;
+  padding: 12px 14px;
+  border: 1px solid #f0e2ee;
+  border-radius: 14px;
+  background: #fff;
+}
+.feature-chip span {
+  color: var(--muted);
+  font-size: 11px;
+}
+.feature-chip b {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+.feature-chip small {
+  color: #a58aa0;
+  font-size: 10px;
+}
+.styling-tips {
+  margin: 14px 0 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px dashed #e3c4dc;
+}
+.styling-tips ul {
+  margin: 8px 0 0;
+  padding-inline-start: 18px;
+  color: #6d5769;
+  font-size: 12px;
+  line-height: 2;
+}
+.styling-tip {
+  margin: 0 0 18px;
+  border-style: dashed;
+}
+.analysis-results > small,
+.analysis-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+.body-canvas {
+  max-width: 220px;
+  margin-top: 14px;
+}
+
+/* Clothes step. */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.chip {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: #6d5769;
+  font-size: 12px;
+  cursor: pointer;
+}
+.chip.selected {
+  border-color: transparent;
+  background: var(--gradient);
+  color: #fff;
+}
+.choice .art {
+  position: relative;
+}
+.choice .badge {
+  position: absolute;
+  top: 8px;
+  inset-inline-start: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #ffffffe6;
+  color: #963276;
+  font-size: 10px;
+}
+.choice small {
+  display: block;
+  padding: 0 8px 10px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.empty-note {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Generation panel. */
+.generation-panel {
+  margin-top: 22px;
+}
+.generated-image {
+  display: block;
+  max-width: 100%;
+  max-height: 640px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+.result-note {
+  font-size: 12px;
+}
+
+/* Dashboard. */
+.event-card {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+.event-card.past {
+  opacity: 0.72;
+}
+.event-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.event-countdown {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+}
+.event-card.past .event-countdown {
+  color: var(--muted);
+}
+.event-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.event-actions .icon-button {
+  margin-inline-start: auto;
+}
+.wardrobe-card {
+  position: relative;
+}
+.wardrobe-card .icon-button {
+  position: absolute;
+  top: 16px;
+  inset-inline-end: 16px;
+}
+.empty-state .spinner {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+.save-indicator {
+  align-self: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+.save-indicator.saved {
+  color: #4f8a5b;
+}
+.save-indicator.error {
+  color: #b3463f;
+}
+.advice-text {
+  white-space: pre-line;
+}
+
+/* Account dialog. */
+#account-dialog {
+  max-height: min(92vh, 860px);
+  overflow-y: auto;
+}
+#account-dialog select,
+#account-dialog input[type='number'] {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 11px;
+  border: 1px solid #e4d6dc;
+  border-radius: 6px;
+  background: #fffdfb;
+  color: #52323f;
+  font: inherit;
+}
+#account-dialog label > small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+#account-dialog details {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+#account-dialog summary {
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--ink);
+}
+#account-dialog [role='alert'],
+#event-error,
+#wardrobe-error,
+#chat-error {
+  color: #b3463f;
+}
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 0;
+  border: 0;
+}
+.segmented legend {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 12px;
+}
+.segmented legend small {
+  color: var(--muted);
+}
+#account-dialog .segmented label {
+  flex: 1 1 140px;
+  margin: 0;
+  cursor: pointer;
+}
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  width: 1px !important;
+  height: 1px;
+}
+.segmented span {
+  display: block;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+.segmented input:checked + span {
+  border-color: #c64a9f;
+  box-shadow: 0 0 0 2px #eccce5;
+  color: #963276;
+  font-weight: 600;
+}
+.segmented input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Chat. */
+.chat-clear {
+  margin-inline-start: auto;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.chat-header .chat-clear + .close {
+  margin-inline-start: 6px;
+}
+.chat-context {
+  margin: 0;
+  padding: 8px 18px;
+  background: #faf4fa;
+  color: #8d6c89;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .hijab-options {
+    gap: 10px;
+  }
+  .hijab-option-art svg {
+    width: 64px;
+    height: 72px;
+  }
+  .occasion-actions .save-indicator {
+    flex-basis: 100%;
+  }
+}
+
+/* Garment cards: a square art box that always contains the whole picture, on every screen size. */
+.outfit-cards .art {
+  height: auto;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.outfit-cards .art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* The selection tick sits on the right; keep the badge on the left so they never overlap. */
+.choice .badge {
+  inset-inline-start: auto;
+  left: 8px;
+}
+.event-card p,
+.event-card h3 {
+  margin: 0;
+}
+.event-card small {
+  margin: 8px 0 0;
+}

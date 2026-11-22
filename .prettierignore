@@ -1,0 +1,6 @@
+public/vendor/
+public/catalog.json
+legacy/
+runtime/
+node_modules/
+package-lock.json

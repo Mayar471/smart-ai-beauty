@@ -1,0 +1,19 @@
+# Private data: database, uploaded photos, API keys and logs
+runtime/
+.env
+*.env
+!.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+
+# Dependencies and tooling
+node_modules/
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
